@@ -1,0 +1,46 @@
+2025-10-04 09:42:55 | INFO | Logging to file: logs/project_log.log
+2025-10-04 09:42:55 | INFO | Log sanitization enabled, personal info removed
+2025-10-04 09:42:56 | INFO | Calling SQLite init_db() with {db_path=}.
+2025-10-04 09:42:56 | INFO | SUCCESS: Got a cursor to execute SQL.
+2025-10-04 09:42:56 | INFO | SUCCESS: Database initialized and table ready at C:/Users/USER/AppData/Local/Temp/pytest-of-USER/pytest-546/test_init_db_is_idempotent0/test.sqlite.
+2025-10-04 09:42:56 | INFO | Calling SQLite init_db() with {db_path=}.
+2025-10-04 09:42:56 | INFO | SUCCESS: Got a cursor to execute SQL.
+2025-10-04 09:42:56 | INFO | SUCCESS: Database initialized and table ready at C:/Users/USER/AppData/Local/Temp/pytest-of-USER/pytest-546/test_init_db_is_idempotent0/test.sqlite.
+2025-10-04 09:42:56 | INFO | Calling SQLite init_db() with {db_path=}.
+2025-10-04 09:42:56 | INFO | SUCCESS: Got a cursor to execute SQL.
+2025-10-04 09:42:56 | INFO | SUCCESS: Database initialized and table ready at C:/Users/USER/AppData/Local/Temp/pytest-of-USER/pytest-546/test_init_db_preserves_data0/test.sqlite.
+2025-10-04 09:42:56 | INFO | Calling SQLite insert_message() with:
+2025-10-04 09:42:56 | INFO | message={'message': 'test', 'author': 'A', 'timestamp': '2025-01-01 00:00:00', 'category': 'x', 'sentiment': 0.5, 'keyword_mentioned': 'k', 'message_length': 4}
+2025-10-04 09:42:56 | INFO | db_path=WindowsPath('C:/Users/USER/AppData/Local/Temp/pytest-of-USER/pytest-546/test_init_db_preserves_data0/test.sqlite')
+2025-10-04 09:42:56 | INFO | Inserted one message into the database.
+2025-10-04 09:42:56 | INFO | Calling SQLite init_db() with {db_path=}.
+2025-10-04 09:42:56 | INFO | SUCCESS: Got a cursor to execute SQL.
+2025-10-04 09:42:56 | INFO | SUCCESS: Database initialized and table ready at C:/Users/USER/AppData/Local/Temp/pytest-of-USER/pytest-546/test_init_db_preserves_data0/test.sqlite.
+2025-10-04 09:42:56 | INFO | Calling SQLite init_db() with {db_path=}.
+2025-10-04 09:42:56 | INFO | SUCCESS: Got a cursor to execute SQL.
+2025-10-04 09:42:56 | INFO | SUCCESS: Database initialized and table ready at C:/Users/USER/AppData/Local/Temp/pytest-of-USER/pytest-546/test_insert_message_appends0/test.sqlite.
+2025-10-04 09:42:56 | INFO | Calling SQLite insert_message() with:
+2025-10-04 09:42:56 | INFO | message={'message': 'first', 'author': 'A', 'timestamp': '2025-01-01 00:00:00', 'category': 'x', 'sentiment': 0.5, 'keyword_mentioned': 'k', 'message_length': 5}
+2025-10-04 09:42:56 | INFO | db_path=WindowsPath('C:/Users/USER/AppData/Local/Temp/pytest-of-USER/pytest-546/test_insert_message_appends0/test.sqlite')
+2025-10-04 09:42:56 | INFO | Inserted one message into the database.
+2025-10-04 09:42:56 | INFO | Calling SQLite insert_message() with:
+2025-10-04 09:42:56 | INFO | message={'message': 'second', 'author': 'B', 'timestamp': '2025-01-01 00:00:01', 'category': 'y', 'sentiment': 0.7, 'keyword_mentioned': 'k2', 'message_length': 6}
+2025-10-04 09:42:56 | INFO | db_path=WindowsPath('C:/Users/USER/AppData/Local/Temp/pytest-of-USER/pytest-546/test_insert_message_appends0/test.sqlite')
+2025-10-04 09:42:56 | INFO | Inserted one message into the database.
+2025-10-04 10:28:52 | INFO | Logging to file: logs/project_log.log
+2025-10-04 10:28:52 | INFO | Log sanitization enabled, personal info removed
+2025-10-04 10:28:52 | INFO | Starting db testing.
+2025-10-04 10:28:52 | INFO | BASE_DATA_DIR: C:/Users/USER/Documents/buzzline-05-case/data
+2025-10-04 10:28:52 | INFO | Calling SQLite init_db() with {db_path=}.
+2025-10-04 10:28:52 | INFO | SUCCESS: Got a cursor to execute SQL.
+2025-10-04 10:28:52 | INFO | SUCCESS: Database initialized and table ready at C:/Users/USER/Documents/buzzline-05-case/data/test_buzz.sqlite.
+2025-10-04 10:28:52 | INFO | Initialized database file at C:/Users/USER/Documents/buzzline-05-case/data/test_buzz.sqlite.
+2025-10-04 10:28:52 | INFO | Calling SQLite insert_message() with:
+2025-10-04 10:28:52 | INFO | message={'message': 'I just shared a meme! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-01-29 14:35:20', 'category': 'humor', 'sentiment': 0.87, 'keyword_mentioned': 'meme', 'message_length': 42}
+2025-10-04 10:28:52 | INFO | db_path=WindowsPath('C:/Users/USER/Documents/buzzline-05-case/data/test_buzz.sqlite')
+2025-10-04 10:28:52 | INFO | Inserted one message into the database.
+2025-10-04 10:28:52 | INFO | Deleted message with id 1 from the database.
+2025-10-04 10:28:52 | INFO | Finished testing.
+2025-10-04 10:29:06 | INFO | Logging to file: logs/project_log.log
+2025-10-04 10:29:06 | INFO | Log sanitization enabled, personal info removed
+2025-10-04 10:29:06 | INFO | Starting db testing.
