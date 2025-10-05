@@ -31,25 +31,14 @@ Top scorer annotations for each team.
       cd WNBA-Stream-W6
 
 
-  Create a virtual environment
+  Create a virtual environment: 
       python -m venv .venv
-
-
-  Activate the virtual environment
-      Windows (PowerShell):
-      .venv\Scripts\Activate.ps1
-
-
-  Windows (cmd):
-     .venv\Scripts\activate.bat
-
-
-  Install dependencies
-     pip install -r requirements.txt
-
-
-  If requirements.txt is not present, install manually:
-      pip install matplotlib python-dotenv
+      
+      Activate the virtual environment
+        .venv\Scripts\Activate.ps1
+    
+    Install dependencies
+        pip install -r requirements.txt
 
 
 ## Running the Project
