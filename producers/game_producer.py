@@ -1,50 +1,84 @@
-# producers
-# game_producer.py
+# ============================================
+# producers/game_producer.py
+# WNBA Playoffs Streaming Producer
+# ============================================
 
+import os
+import sys
 import json
 import time
-import os
+import logging
+from datetime import datetime
 from dotenv import load_dotenv
 
+# Ensure project root is in path so we can import utils
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from utils.utils_producer import send_event
+
+
+# ----------------------------
 # Load environment variables
+# ----------------------------
 load_dotenv()
 
-# Config from .env
 DATA_DIR = os.getenv("BASE_DATA_DIR", "data")
 LIVE_DATA_FILE = os.getenv("LIVE_DATA_FILE_NAME", "wnba_playoffs_live.json")
 MESSAGE_INTERVAL = float(os.getenv("MESSAGE_INTERVAL_SECONDS", 3))
 
-# Path to the JSON file
 data_file_path = os.path.join(DATA_DIR, LIVE_DATA_FILE)
 
-def load_game_events(file_path):
-    """Load simulated WNBA game events from a JSON file."""
-    try:
-        with open(file_path, "r") as f:
-            events = json.load(f)
-        print(f"[INFO] Loaded {len(events)} game events.")
-        return events
-    except FileNotFoundError:
-        print(f"[ERROR] File not found: {file_path}")
-        return []
-    except json.JSONDecodeError:
-        print(f"[ERROR] Failed to decode JSON from {file_path}")
+
+# ----------------------------
+# Helper: Load event data
+# ----------------------------
+def load_game_data(file_path):
+    """Load WNBA game events from a JSON file."""
+    if not os.path.exists(file_path):
+        print(f"[ERROR] Data file not found: {file_path}")
         return []
 
-def stream_events(events, interval):
-    """Simulate live streaming of game events."""
+    with open(file_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # Normalize event structure
+    for e in data:
+        e["points_scored"] = e.get("points_scored", e.get("points", 0))
+        e.pop("points", None)
+    return data
+
+
+# ----------------------------
+# Simulate live streaming
+# ----------------------------
+def stream_events(events, delay=3):
+    """Simulate sending live WNBA game events with a time delay."""
     for event in events:
-       
-        print(json.dumps(event))  
+        event["timestamp"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        event["points_scored"] = event.get("points_scored", 0)
 
+        send_event(event, delay=delay)
+        print(f"[INFO] Sent event: {event}")
+        time.sleep(delay)
+
+
+# ----------------------------
+# Main function
+# ----------------------------
 def main():
-    events = load_game_events(data_file_path)
-    if events:
-        print("[INFO] Starting event stream...\n")
-        stream_events(events, MESSAGE_INTERVAL)
-        print("\n[INFO] Finished streaming all events.")
-    else:
-        print("[INFO] No events to stream.")
+    print("[INFO] Starting WNBA Producer...")
+    print(f"[INFO] Streaming events from: {data_file_path}")
 
+    events = load_game_data(data_file_path)
+    if not events:
+        print("[ERROR] No events to stream. Exiting.")
+        return
+
+    print(f"[INFO] Loaded {len(events)} events from {data_file_path}")
+    stream_events(events, MESSAGE_INTERVAL)
+
+
+# ----------------------------
+# Run the producer
+# ----------------------------
 if __name__ == "__main__":
     main()

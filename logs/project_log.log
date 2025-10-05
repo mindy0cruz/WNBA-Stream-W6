@@ -103,3 +103,27 @@
 2025-10-04 13:41:12 | INFO | {'message': 'I just loved a story! It was weird.', 'author': 'Eve', 'timestamp': '2025-10-04 13:41:12', 'category': 'other', 'sentiment': 0.19, 'keyword_mentioned': 'other', 'message_length': 35}
 2025-10-04 13:41:13 | WARNING | Producer interrupted by user.
 2025-10-04 13:41:13 | INFO | Producer shutting down.
+2025-10-04 13:49:19 | INFO | Logging to file: logs/project_log.log
+2025-10-04 13:49:19 | INFO | Log sanitization enabled, personal info removed
+2025-10-04 13:51:08 | INFO | Logging to file: logs/project_log.log
+2025-10-04 13:51:08 | INFO | Log sanitization enabled, personal info removed
+2025-10-04 13:52:47 | INFO | Logging to file: logs/project_log.log
+2025-10-04 13:52:47 | INFO | Log sanitization enabled, personal info removed
+2025-10-04 13:53:17 | INFO | Logging to file: logs/project_log.log
+2025-10-04 13:53:17 | INFO | Log sanitization enabled, personal info removed
+2025-10-04 13:54:47 | INFO | Logging to file: logs/project_log.log
+2025-10-04 13:54:47 | INFO | Log sanitization enabled, personal info removed
+2025-10-04 13:55:58 | INFO | Logging to file: logs/project_log.log
+2025-10-04 13:55:58 | INFO | Log sanitization enabled, personal info removed
+2025-10-04 13:59:16 | INFO | Logging to file: logs/project_log.log
+2025-10-04 13:59:16 | INFO | Log sanitization enabled, personal info removed
+2025-10-04 14:00:26 | INFO | Logging to file: logs/project_log.log
+2025-10-04 14:00:26 | INFO | Log sanitization enabled, personal info removed
+2025-10-04 14:01:28 | INFO | Logging to file: logs/project_log.log
+2025-10-04 14:01:28 | INFO | Log sanitization enabled, personal info removed
+2025-10-04 14:02:19 | INFO | Logging to file: logs/project_log.log
+2025-10-04 14:02:19 | INFO | Log sanitization enabled, personal info removed
+2025-10-04 14:04:17 | INFO | Logging to file: logs/project_log.log
+2025-10-04 14:04:17 | INFO | Log sanitization enabled, personal info removed
+2025-10-04 14:04:49 | INFO | Logging to file: logs/project_log.log
+2025-10-04 14:04:49 | INFO | Log sanitization enabled, personal info removed
