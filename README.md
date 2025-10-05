@@ -28,39 +28,32 @@ Top scorer annotations for each team.
 
     git clone https://github.com/mindy0cruz/WNBA-Stream-W6.git
 
-    cd WNBA-Stream-W6
+      cd WNBA-Stream-W6
 
 
   Create a virtual environment
-
-    python -m venv .venv
+      python -m venv .venv
 
 
   Activate the virtual environment
-
-    Windows (PowerShell):
-
-    .venv\Scripts\Activate.ps1
+      Windows (PowerShell):
+      .venv\Scripts\Activate.ps1
 
 
   Windows (cmd):
-
-    .venv\Scripts\activate.bat
+     .venv\Scripts\activate.bat
 
 
   macOS/Linux:
-
-    source .venv/bin/activate
+      source .venv/bin/activate
 
 
   Install dependencies
-
-    pip install -r requirements.txt
+     pip install -r requirements.txt
 
 
   If requirements.txt is not present, install manually:
-
-    pip install matplotlib python-dotenv
+      pip install matplotlib python-dotenv
 
 
 
@@ -83,14 +76,14 @@ Start the Consumer
 
 Each game event in wnba_playoffs_live.json has the structure:
 
-{
+      {
     "timestamp": "2025-10-04 19:00:00",
     "game": "Mercury vs Aces",
     "team": "Aces",
     "player": "A’ja Wilson",
     "points_scored": 2,
     "message": "A’ja Wilson hits a jumper to start the game!"
-}
+      }
 
 
 
