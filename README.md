@@ -44,17 +44,12 @@ Top scorer annotations for each team.
      .venv\Scripts\activate.bat
 
 
-  macOS/Linux:
-      source .venv/bin/activate
-
-
   Install dependencies
      pip install -r requirements.txt
 
 
   If requirements.txt is not present, install manually:
       pip install matplotlib python-dotenv
-
 
 
 ## Running the Project
