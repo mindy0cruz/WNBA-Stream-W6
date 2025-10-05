@@ -24,58 +24,59 @@ Top scorer annotations for each team.
 
 ## Setup Instructions
 
-Clone the repository
+  Clone the repository
 
-  git clone https://github.com/mindy0cruz/WNBA-Stream-W6.git
-  cd WNBA-Stream-W6
+    git clone https://github.com/mindy0cruz/WNBA-Stream-W6.git
 
-
-Create a virtual environment
-
-  python -m venv .venv
+    cd WNBA-Stream-W6
 
 
-Activate the virtual environment
+  Create a virtual environment
 
-  Windows (PowerShell):
-
-  .venv\Scripts\Activate.ps1
+    python -m venv .venv
 
 
-Windows (cmd):
+  Activate the virtual environment
 
-  .venv\Scripts\activate.bat
+    Windows (PowerShell):
 
-
-macOS/Linux:
-
-  source .venv/bin/activate
+    .venv\Scripts\Activate.ps1
 
 
-Install dependencies
+  Windows (cmd):
 
-  pip install -r requirements.txt
+    .venv\Scripts\activate.bat
 
 
-If requirements.txt is not present, install manually:
+  macOS/Linux:
 
-  pip install matplotlib python-dotenv
+    source .venv/bin/activate
+
+
+  Install dependencies
+
+    pip install -r requirements.txt
+
+
+  If requirements.txt is not present, install manually:
+
+    pip install matplotlib python-dotenv
 
 
 
 ## Running the Project
+
 Start the Producer
 
-Simulates streaming of game events:
+  Simulates streaming of game events:
 
-python producers/game_producer.py
+    python producers/game_producer.py
 
 Start the Consumer
 
-Visualizes team scores and momentum in real-time:
+  Visualizes team scores and momentum in real-time:
 
-python consumers/game_consumer.py
-
+    python consumers/game_consumer.py
 
 
 ## JSON Event Format
@@ -83,12 +84,12 @@ python consumers/game_consumer.py
 Each game event in wnba_playoffs_live.json has the structure:
 
 {
-  "timestamp": "2025-10-04 19:00:00",
-  "game": "Mercury vs Aces",
-  "team": "Aces",
-  "player": "A’ja Wilson",
-  "points_scored": 2,
-  "message": "A’ja Wilson hits a jumper to start the game!"
+    "timestamp": "2025-10-04 19:00:00",
+    "game": "Mercury vs Aces",
+    "team": "Aces",
+    "player": "A’ja Wilson",
+    "points_scored": 2,
+    "message": "A’ja Wilson hits a jumper to start the game!"
 }
 
 
