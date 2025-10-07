@@ -44,7 +44,19 @@ def load_game_events(file_path):
 # ----------------------------
 fig, (ax_score, ax_momentum) = plt.subplots(1, 2, figsize=(14, 6))
 fig.suptitle(VIS_TITLE, fontsize=16, fontweight="bold")
+
+# Make space at the bottom for explanation text
+plt.subplots_adjust(bottom=0.15)
 plt.tight_layout(pad=4)
+
+# Bottom caption explaining scale differences
+fig.text(
+    0.5, 0.05,
+    "Note: The left graph shows absolute team scores (always positive, cumulative). "
+    "The right graph shows score *difference* (momentum), centered around zero — "
+    "so scales will differ.",
+    ha="center", va="top", fontsize=9, color="dimgray"
+)
 
 team_scores = defaultdict(list)
 player_scores = defaultdict(lambda: defaultdict(int))
@@ -90,7 +102,7 @@ def update(frame):
     # ----------------------------
     ax_score.clear()
     ax_score.set_title("Team Scores")
-    ax_score.set_xlabel("Event Number")
+    ax_score.set_xlabel("Play")
     ax_score.set_ylabel("Score")
     ax_score.grid(True, linestyle="--", alpha=0.6)
 
@@ -123,13 +135,25 @@ def update(frame):
     # Plot momentum (Right)
     # ----------------------------
     ax_momentum.clear()
+
+    # Dynamic label explaining the scale
+    ax_momentum.text(
+        0.5, 1.02,
+        "",
+        transform=ax_momentum.transAxes,
+        ha="center",
+        va="bottom",
+        fontsize=8,
+        color="gray"
+    )
+
     if len(teams) == 2:
         t1, t2 = teams
         diff = team_scores[t1][-1] - team_scores[t2][-1]
         momentum.append(diff)
 
         ax_momentum.set_title(f"Momentum: {t1} - {t2}")
-        ax_momentum.set_xlabel("Event Number")
+        ax_momentum.set_xlabel("Play")
         ax_momentum.set_ylabel("Score Difference")
         ax_momentum.grid(True, linestyle="--", alpha=0.6)
 
@@ -161,7 +185,7 @@ def main():
     for event in events:
         event_queue.append(event)
 
-    ani = FuncAnimation(fig, update, interval=MESSAGE_INTERVAL*1000, cache_frame_data=False)
+    ani = FuncAnimation(fig, update, interval=MESSAGE_INTERVAL * 1000, cache_frame_data=False)
     plt.show()
 
 if __name__ == "__main__":
