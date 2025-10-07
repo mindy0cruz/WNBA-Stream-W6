@@ -96,6 +96,7 @@ loguru
 
 # Environment variables management
 python-dotenv
+matplotlib
 
 # pytest for lightweight testing
 pytest
